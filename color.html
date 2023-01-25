@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border:1px solid black;
+        width: 200px;
+        height:200px;
+    }
+</style>
+
+<body>
+    <div class="container">
+    <h1 id="demo"> Heading</h1>
+    </div>
+    <button onclick = "changeColor('blue')">blue</button>
+    <button onclick = "changeColor('red')">red</button>
+    <button onclick = "changeColor('yellow')">yellow</button>
+    
+    <script>
+        function changeColor(color){
+        var x = document.getElementById('demo');
+        x.style.color=color;                           //HW validation form crud operation
+    }
+    
+    </script>
+    
+</body>
+</html>

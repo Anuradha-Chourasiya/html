@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border:2px solid black;
+        width: 500px;
+        padding:10px;
+    }
+    .child{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    #view{
+        border:2px solid black;
+    }
+    .Main{
+        display:flex;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <div class="Main">
+    <form>
+        <div class="container">
+            <div class="child">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            </div><br>
+            <input type="email" placeholder="email"><br><br>
+            <input type="date" placeholder="DOB"><br><br>
+            <!-- Show:<input type="checkbox" id="" onclick="show()"><br>
+            Hide:<input type="checkbox" onclick="hide()"> -->
+            ok:<input type="checkbox" onclick="func()">
+            
+        </div>
+    </form>
+    <div class="container1" >
+    <form   id="view" style="display: none;" >
+        username:<input type="text" maxlength="5" requirerd><br><br>
+         password:<input type="text" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br><br>  
+         mo.no.<input type="text" required pattern="^([0]\+[0-9] {1,5})?([7-9][0-9]{9})$"><br><br> 
+          email<input type="text" required   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br> 
+        search<input type="search" reqired ><br><br> 
+       <button>submit</button><br>
+    
+    </form>
+    </div>
+    </div>
+
+   
+    <!-- <script>
+        function show()
+        {
+            var anu=document.getElementById("view")
+            anu.style.visibility="visible";
+        }
+        function hide()
+        {
+            
+            document.getElementById("view").style.visibility="hidden";
+        }
+    </script> -->
+    <script>
+        function func()
+        {
+            var x=document.getElementById("view");
+            if(x.style.display == "none")
+            {
+                x.style.display="block";
+            }
+            else{
+                x.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>
